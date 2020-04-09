@@ -1,0 +1,105 @@
+<!-- index.nunjucks -->
+{% extends "layout.njk" %}
+{% from "macros/short-summary.njk" import shortSummary %}
+
+<!-- Page title -->
+{% set pageTitle = 'Biography' %}
+
+{% block content %}
+
+<main id="content">
+  <!-- CONTENT -->
+  <div id="pagecontent">
+    <div class="occlss-wrapper">
+        <div role="article" class="occlss-wrapper occlss-wrapper--secondary">
+          <!--START wrapper block-->
+
+          <div class="occlss-layout occlss-layout--gutter-s">
+            <!--START layout block-->
+            <div class="occlss-layout__col occlss-layout__col--md-12">
+              <!--START layout elemnt -->
+              
+              <h1 class="occlss-g-heading-main occlss-u-tpspace-md">Major online providers</h1>
+              <p class="occlss-g-summary-text occlss-u-bspace-none">Some Oxfordshire History Centre collections have been digitised and are available online – some websites are accessible via subscription only, while others are free to access</p>      
+
+            </div>
+            <!--End layout elemnt -->
+          </div>
+          <!--End layout block -->
+
+          <div class="occlss-layout occlss-layout--gutter-s">
+            <!--START layout block-->
+            <div class="occlss-layout__col occlss-layout__col--bleed occlss-layout__col--12">
+
+              {{ shortSummary({
+                summaryTitle: 'In this section',
+                items: [
+                  {
+                    title: "Ancestry Library Edition",
+                    text: [
+                      {
+                        p: 'Worldwide collection of genealogy records',
+                        i: 'Access available in Oxfordshire History Centre and Libraries only'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "Find My Past",
+                    text: [
+                      {
+                        p: 'Worldwide collection of genealogy records, with a UK and Ireland bias',
+                        i: 'Access available in Oxfordshire History Centre and Libraries only'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "The Genealogist",
+                    text: [
+                      {
+                        p: 'British genealogy records',
+                        i: 'Access available in Oxfordshire History Centre only'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "Scotland’s People",
+                    text: [
+                      {
+                        p: 'Official site for access to Scottish records',
+                        i: 'Sign-in required'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "British Library",
+                    text: [
+                      {
+                        p: 'Digital collections and services'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "Cyndi’s List",
+                    text: [
+                      {
+                        p: 'Portal for browsing genealogical resources by subject or place'
+                      }
+                    ],
+                    url: "#"
+                  }
+                ]
+              }) }}
+
+
+            </div>
+          
+          </div>
+
+
+        </div>
+    </div>
+  </div>
+  <!-- END CONTENT -->
+</main>
+
+{% endblock %}

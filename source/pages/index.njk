@@ -1,0 +1,257 @@
+<!-- index.nunjucks -->
+{% extends "layout.njk" %}
+{% from "macros/short-summary.njk" import shortSummary %}
+
+<!-- Page title -->
+{% set pageTitle = 'Biography' %}
+
+{% block content %}
+
+<main id="content">
+  <!-- CONTENT -->
+  <div id="pagecontent">
+    <div class="occlss-wrapper">
+      <div role="article" class="occlss-wrapper occlss-wrapper--secondary">
+        <!--START wrapper block-->
+
+        <div class="occlss-layout occlss-layout--gutter-s">
+          <!--START layout block-->
+          <div class="occlss-layout__col occlss-layout__col--md-12">
+            <!--START layout elemnt -->
+            
+            <h1 class="occlss-g-heading-main occlss-u-tpspace-md">Index to categories</h1>      
+
+          </div>
+          <!--End layout elemnt -->
+        </div>
+        <!--End layout block -->
+
+        <div class="occlss-layout occlss-layout--gutter-s">
+          <!--START layout block-->
+          <div class="occlss-layout__col occlss-layout__col--bleed occlss-layout__col--12">
+
+            {{ shortSummary({
+              summaryTitle: 'In this section',
+              items: [
+                                {
+                    title: "Ancestry Library Edition",
+                    text: [
+                      {
+                        p: 'Worldwide collection of genealogy records',
+                        i: 'Access available in Oxfordshire History Centre and Libraries only'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "Find My Past",
+                    text: [
+                      {
+                        p: 'Worldwide collection of genealogy records, with a UK and Ireland bias',
+                        i: 'Access available in Oxfordshire History Centre and Libraries only'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "The Genealogist",
+                    text: [
+                      {
+                        p: 'British genealogy records',
+                        i: 'Access available in Oxfordshire History Centre only'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "Scotland’s People",
+                    text: [
+                      {
+                        p: 'Official site for access to Scottish records',
+                        i: 'Sign-in required'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "British Library",
+                    text: [
+                      {
+                        p: 'Digital collections and services'
+                      }
+                    ],
+                    url: "#"
+                  },{
+                    title: "Cyndi’s List",
+                    text: [
+                      {
+                        p: 'Portal for browsing genealogical resources by subject or place'
+                      }
+                    ],
+                    url: "#"
+                  },
+                {
+                  title: "Major online providers",
+                  text: [
+                    {
+                      p: 'Key sites providing family history and local history content, like Ancestry, Find My Past and the British Library'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Biography",
+                  text: [
+                    {
+                      p: 'Biographies, peerage, gentry, clergy, criminals, mayors and freemen'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Birth, marriage, death",
+                  text: [
+                    {
+                      p: 'Parish registers, baptisms, births, marriages, deaths, burials, cemeteries. monumental inscriptions'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Catalogues",
+                  text: [
+                    {
+                      p: 'Local and national library and archive catalogues'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Census",
+                  text: [
+                    {
+                      p: 'Census records for UK and overseas'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Directories and electoral registers",
+                  text: [
+                    {
+                      p: 'Street and trade directories, electoral registers'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Local history - Oxford",
+                  text: [
+                    {
+                      p: 'History and archaeology of Oxford city and university'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Local history - Oxfordshire",
+                  text: [
+                    {
+                      p: 'History and archaeology of Oxfordshire'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Local history - UK",
+                  text: [
+                    {
+                      p: 'History and archaeology – national sources'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Maps - Oxfordshire",
+                  text: [
+                    {
+                      p: 'Historic and modern mapping of Oxfordshire'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Maps - UK",
+                  text: [
+                    {
+                      p: 'Historic and modern mapping and gazetteers – national sources'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Military - Oxfordshire",
+                  text: [
+                    {
+                      p: 'Images and records for Oxfordshire armed force'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Military - UK and world",
+                  text: [
+                    {
+                      p: 'Records for armed forces – UK and world'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Newspapers, periodicals and ephemera",
+                  text: [
+                    {
+                      p: 'British Newspaper Archive and other sources'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Oral history and film",
+                  text: [
+                    {
+                      p: 'Oxfordshire sound recordings, and catalogues and guides to oral history'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Personal names",
+                  text: [
+                    {
+                      p: 'Surname origins, research interests, migration and mapping'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Photographs - Oxfordshire",
+                  text: [
+                    {
+                      p: 'Oxfordshire images, and catalogues and guides to photographic collections'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Photographs - UK",
+                  text: [
+                    {
+                      p: 'Catalogues and guides to national collections of images'
+                    }
+                  ],
+                  url: "#"
+                },{
+                  title: "Wills and probate",
+                  text: [
+                    {
+                      p: 'Oxfordshire, Berkshire, UK and Ireland wills and probate records'
+                    }
+                  ],
+                  url: "#"
+                }
+              ]
+            }) }}
+
+
+          </div>
+        
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- END CONTENT -->
+</main>
+
+{% endblock %}

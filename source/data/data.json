@@ -1,0 +1,14 @@
+{
+  "imagesFolderUrl": "/assets/images/",
+  "styleFolderUrl": "/assets/css/",
+  "javascriptFolderUrl": "/assets/js/",
+  "pageTitle": "Test - Oxfordshire County Council",
+  "mainNav": [{
+    "title": "Home",
+    "url": "/"
+    }, {
+    "title": "About",
+    "url": "#"
+    }
+  ]
+}

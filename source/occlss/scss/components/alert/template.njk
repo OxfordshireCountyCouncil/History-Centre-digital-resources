@@ -1,0 +1,60 @@
+{######
+title:    [text]
+content:  [text]
+state:    error, info, success, warning
+controls: true/false
+######}
+{% from "icon/macro.njk" import occlssIcon %}
+<div class="occlss-alert {% if params.state | lower == 'error' %}occlss-alert--error{% endif %} {% if params.state | lower == 'info' %}occlss-alert--info{% endif %} {% if params.state | lower == 'success' %}occlss-alert--success{% endif %} {% if params.state | lower == 'warning' %}occlss-alert--warning{% endif %}">
+    <div class="occlss-layout"><!--START layout block-->
+        <div class="occlss-layout__col occlss-layout__col--2 occlss-layout__col--flex occlss-alert__sign-cont"><!--START layout elemnt -->
+            
+            {% if params.state | lower == 'error' %}
+                {{ occlssIcon({
+                    name: "exclamation-mark",
+                    containerClass: "occlss-alert__sign"
+                }) }}
+            {% endif %}
+
+            {% if params.state | lower == 'info' %}
+                {{ occlssIcon({
+                    name: "info",
+                    containerClass: "occlss-alert__sign"
+                }) }}
+            {% endif %}
+
+            {% if params.state | lower == 'success' %}
+               {{ occlssIcon({
+                    name: "check",
+                    containerClass: "occlss-alert__sign"
+                }) }}
+            {% endif %}
+
+            {% if params.state | lower == 'warning' %}
+                {{ occlssIcon({
+                    name: "warning-sign",
+                    containerClass: "occlss-alert__sign"
+                }) }}
+            {% endif %}
+
+        </div><!--End layout elemnt -->
+        <div class="occlss-layout__col {% if params.controls == "true"  %} occlss-layout__col--9 {% else %} occlss-layout__col--10 {% endif %} occlss-alert__cont occlss-layout__col--flex"><!--START layout elemnt -->
+
+                {% if params.title %}<h2 class="occlss-alert__heading">{{ params.title }}</h2>{% endif %}
+                {% if params.content %}<p class="occlss-alert__text">{{ params.content  | safe }}</p>{% endif %}
+
+        </div><!--End layout elemnt -->
+
+        {% if params.controls | lower == "true"  %}
+        <div class="occlss-layout__col occlss-layout__col--1 occlss-layout__controls"><!--START layout elemnt -->
+              <a href="javascript:void(0);">
+                {{ occlssIcon({
+                    name: "ex",
+                    class: "occlss-alert__ex-icon"
+                }) }} 
+              </a>
+        </div><!--End layout elemnt -->
+        {% endif %}
+
+    </div> <!--End layout block -->
+</div>

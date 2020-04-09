@@ -1,0 +1,8 @@
+{% from "icon/macro.njk" import occlssIcon %}
+<a class="occlss-download-link" href="{{ params.url }}">
+{{ occlssIcon({
+  name: "file",
+  class: "occlss-icon--small occlss-download-link__icon"
+}) }}
+<span class="occlss-download-link__lnk">{{ params.text }}</span>
+</a>

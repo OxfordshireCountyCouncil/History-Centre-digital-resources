@@ -1,0 +1,89 @@
+// Images path 
+$occlss-global-image-path:  '../images/occlss';
+//@import "occlss";
+@import "../../occlss/scss/occlss";
+
+
+/// Category nav
+.occlss-page-head__cat-nav-container--small {
+    padding: rem(10px 0 0 0);
+}
+
+.occlss-category-nav--small {
+    .occlss-category-nav__link {
+        font-size: rem(15px);
+        margin-bottom: 20px;
+        &:after {
+            bottom: auto;
+            top: auto;
+        }
+    }
+}
+
+.occlss-alert--cookiepopup {
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 1rem;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    max-width: 1100px;
+    z-index: 9999;
+    font-family: "Open Sans",sans-serif;
+    color: #333333;
+    font-weight: 400;
+}
+
+.occlss-button {
+  cursor: pointer;
+}
+
+.occ-header-alert {
+    padding-top: rem(27px);
+    strong {
+        @extend h2;
+        display: inline-block;
+        @extend .occlss-u-bspace-sm;
+    }   
+}
+
+// Short summary extras
+
+.occlss-short-summary__infotext {
+    background: $occlss-brand-color-solitude;
+    border-color: $occlss-brand-color-denim;
+}
+
+.occlss-short-summary__warningtext {
+    background: $occlss-brand-color-bleach-white;
+    border-color: $occlss-brand-color-tahiti-gold;
+}
+
+.occlss-short-summary__successtext {
+    background: $occlss-brand-color-zanah;
+    border-color: $occlss-brand-color-apple;
+}
+
+.occlss-short-summary__errortext {
+    background: $occlss-brand-color-bridesmaid;
+    border-color: $occlss-brand-color-milano-red;
+}
+
+.occlss-short-summary__infotext,
+.occlss-short-summary__warningtext,
+.occlss-short-summary__successtext, 
+.occlss-short-summary__errortext {
+    padding: rem(10px);
+    margin: 0;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: rem(5px);
+    font-size: rem(12px);
+}
+
+
+
+
+@import "ohc";
+

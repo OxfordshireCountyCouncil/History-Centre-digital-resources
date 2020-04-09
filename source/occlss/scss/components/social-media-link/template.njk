@@ -1,0 +1,9 @@
+{% from "icon/macro.njk" import occlssIcon %}
+
+<a href="{{ params.url }}" id="social-media-link-{{ params.title | lower | replace(" ", "-")}}" class="occlss-social-media-link">
+  {% if params.title %}<span class="occlss-social-media-link__heading">{{ params.title }}</span>{% endif %}
+	{{ occlssIcon({
+		name: params.iconName,
+		class: "occlss-social-media-link__icon"
+	}) }}
+</a>

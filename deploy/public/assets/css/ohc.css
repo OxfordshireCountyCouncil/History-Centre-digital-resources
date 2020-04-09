@@ -1,0 +1,232 @@
+.ohc-page-head__cat-nav-container {
+  padding: 0.9rem 0 0 0;
+}
+
+.ohc-main-heading {
+  margin: 0 0 0 0;
+}
+
+.ohc-main-strapline {
+  padding: 0.9rem 0 0 0;
+}
+
+.ohc-page-heading {
+  margin-top: 0.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.ohc-marginshift05 {
+  margin-bottom: 0.5rem;
+}
+
+.ohc-marginshift {
+  margin-bottom: -1.3rem;
+}
+
+.ohc-marginshift2 {
+  margin-bottom: -2rem;
+}
+
+.ohc-marginshift3 {
+  margin-bottom: -4rem;
+}
+
+.ohc-marginshift4 {
+  margin-bottom: -5rem;
+}
+
+.ohc-marginshift-top {
+  margin-top: 1rem;
+}
+
+.ohc-marginshift-top2 {
+  margin-top: 2rem;
+}
+
+.ohc-marginshift-top-reduce {
+  margin-top: -1.5rem;
+}
+
+.ohc-summary-text {
+  font-family: "Open Sans",sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #525252;
+  line-height: 1.4;
+}
+
+.ohc-splitter::after {
+  content: "";
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #e0e2e5;
+  display: block;
+}
+
+.ohc-splitter--grey::after {
+  content: "";
+  background-color: #D3D3D3;
+}
+
+.ohc-card {
+  /*margin-bottom: rem(24px);
+    @include breakpoint(max-width (map-get($occlss-layout-breakpoints, 'md'))) {
+        margin-bottom: 0;
+    }*/
+}
+
+.ohc-card__image-container {
+  width: 100%;
+  height: 43rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.4375rem;
+  border: 1px solid #000000;
+  background-color: #000000;
+}
+
+@media (max-width: 992px) {
+  .ohc-card__image-container {
+    height: auto;
+    max-height: 25rem;
+  }
+}
+
+.ohc2-card__image-container {
+  width: 100%;
+  height: 13.8rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.4375rem;
+  border: 1px solid #000000;
+  background-color: #000000;
+}
+
+@media (max-width: 992px) {
+  .ohc2-card__image-container {
+    height: auto;
+    max-height: 25rem;
+  }
+}
+
+.ohc-card__image {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .ohc-card__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.ohc-card__header {
+  margin: 0;
+}
+
+.ohc-card__title {
+  font-size: 1.25rem;
+  color: #525252;
+  margin: 0;
+}
+
+.ohc-card__main {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.ohc-card__link {
+  width: 100%;
+  text-decoration: none;
+  color: #0B0C0C;
+  display: inline-block;
+}
+
+.ohc-card__link:hover {
+  color: #0B0C0C;
+  text-decoration: underline;
+}
+
+.ohc-card__link:focus {
+  text-decoration: underline;
+}
+
+.ohc-card__paragraph {
+  margin-bottom: 0;
+}
+
+.ohc-card__date {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.ohc-card--teaser .ohc-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.ohc-card--teaser .ohc-card__paragraph {
+  margin-bottom: 1.25rem;
+}
+
+.ohc-card--teaser .ohc-card__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.ohc-page-footer__wraper {
+  color: #fff;
+  background: #000000;
+  padding-bottom: 0.5rem;
+}
+
+/* Start - Added by RAH for tithe map pages */
+.ohc-article_col--6 {
+  width: 50%;
+  *width: 49.9%;
+}
+
+@media (max-width: 992px) {
+  .ohc-article_col--6 {
+    width: 100%;
+    *width: 99.9%;
+  }
+}
+
+.ohc-button:focus {
+  outline: 2px solid #edc856;
+}
+
+.ohc-button {
+  display: inline;
+  margin: 0.25rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+  text-decoration: none;
+  width: auto;
+  vertical-align: middle;
+  background: none;
+  user-select: none;
+  border: 0.0625rem solid transparent;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.ohc-button:focus, .ohc-button:hover {
+  text-decoration: none;
+}
+
+.ohc-button:active {
+  outline: none;
+}
+
+/* End - Added by RAH for tithe map pages*/

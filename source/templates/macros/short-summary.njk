@@ -1,0 +1,26 @@
+{% macro shortSummary(params) %}
+<div class="occlss-short-summary occlss-short-summary--residents">
+    <div class="occlss-short-summary__title-cont">
+        {% if params.summaryTitle %}<h2 class="occlss-g-xxx-large-text occlss-u-bspace-xs">{{ params.summaryTitle }}</h2>{% endif %}
+        <div class="occlss-splitter occlss-u-tspace-none occlss-splitter--residents"></div>
+    </div>
+      {% for item in params.items %}
+            <article class="occlss-short-summary__link-cont">
+                <a class="occlss-short-summary__link" href="{{ item.url }}">
+                    <div class="occlss-short-summary__content-wraper">
+                        <div class="occlss-short-summary__content">
+                            {% if item.title %}<h3 class="occlss-short-summary__content-title">{{ item.title }}</h3>{% endif %}
+                            {% for paragraph in item.text %}
+                                    <p>{{ paragraph.p }}</p>
+                                    {% if paragraph.i %}<p class="occlss-short-summary__infotext">{{ paragraph.i }}</p>{% endif %}
+                                    {% if paragraph.w %}<p class="occlss-short-summary__warningtext">{{ paragraph.w }}</p>{% endif %}
+                                    {% if paragraph.s %}<p class="occlss-short-summary__successtext">{{ paragraph.s }}</p>{% endif %}
+                                    {% if paragraph.e %}<p class="occlss-short-summary__errortext">{{ paragraph.e }}</p>{% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </a>
+            </article>
+      {% endfor %}
+</div>
+{% endmacro %}
