@@ -4,12 +4,6 @@ import VueCookie from 'vue-cookie'
 
 Vue.use(VueCookie);
 
-/*new Vue({
-  el: '#occ-GDRP-popup',
-  render: h => h(App)
-})
-*/
-
 const mountEl = document.querySelector('#occ-GDPR-popup');
 
 new Vue({

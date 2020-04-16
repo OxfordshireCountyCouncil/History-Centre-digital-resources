@@ -42,7 +42,7 @@ function browserSync(done) {
     server: {
       baseDir: paths.dir.deployDir
     },
-    port: 3000
+    port: 8080
   });
   done();
 }

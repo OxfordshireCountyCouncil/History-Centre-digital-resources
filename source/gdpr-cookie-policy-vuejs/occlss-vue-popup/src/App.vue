@@ -30,14 +30,12 @@ export default {
     }
   },
   created() {
-
     const get_google_stats = this.$cookie.get('google_stats');
     const get_third_party = this.$cookie.get('third_party');
     const get_cookie_settings = this.$cookie.get('cookie_settings');
 
-
     if(get_google_stats == null) {
-        this.SetCookie({'type': 'google', 'status' : false });
+        this.SetCookie({'type': 'google', 'status' : true });
     }
 
     if(get_third_party == null) {
@@ -56,31 +54,33 @@ export default {
   },
   methods: {
     GetDomain() {
-
         let url = window.location.hostname;
         const subdomain = false;
-
         url = url.replace(/(https?:\/\/)?(www.)?/i, '');
-
         if (!subdomain) {
             url = url.split('.');
-
             url = url.slice(url.length - 2).join('.');
         }
-
         if (url.indexOf('/') !== -1) {
             return url.split('/')[0];
         }
-
-        return '.' + url;
+        return  "." + url;
+    },
+    DeleteCookies() {
+        this.$cookie.delete('_ga', {domain: this.GetDomain()});
+        this.$cookie.delete('_gid', {domain: this.GetDomain()});
+        this.$cookie.delete('_gat', {domain: this.GetDomain()});
     },
     SetCookie(value){
 
-        var date = new Date;
+        const date = new Date;
         date.setDate(date.getDate() + 365);
 
         if(value.type == 'google'){
             this.$cookie.set('google_stats', value.status, { expires: date, domain: this.GetDomain()});
+            if(value.status == true) {
+                location.reload();
+            }
         }
 
         if(value.type == 'third_party'){
@@ -92,13 +92,8 @@ export default {
         }
 
     },
-    DeleteCookies() {
-        this.$cookie.delete('_ga', {domain: this.GetDomain()});
-        this.$cookie.delete('_gid', {domain: this.GetDomain()});
-        this.$cookie.delete('_gat', {domain: this.GetDomain()});
-    },
     OnClick(value) {
-        if(value == 'canceled') {
+        if(value == 'canceled'){
             this.popupStatus = false;
             this.SetCookie({'type': 'google', 'status' : false });
             this.SetCookie({'type': 'third_party', 'status' : false });
