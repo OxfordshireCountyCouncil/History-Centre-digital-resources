@@ -51,6 +51,10 @@ export default {
         this.popupStatus = true;
     }
 
+    if(document.location.pathname == this.settingsPath) {
+        this.popupStatus = false;
+    }
+
   },
   methods: {
     GetDomain() {
