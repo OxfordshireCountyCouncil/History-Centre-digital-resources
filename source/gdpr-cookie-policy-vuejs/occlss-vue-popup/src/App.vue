@@ -35,7 +35,7 @@ export default {
     const get_cookie_settings = this.$cookie.get('cookie_settings');
 
     if(get_google_stats == null) {
-        this.SetCookie({'type': 'google', 'status' : true });
+        this.SetCookie({'type': 'google', 'status' : false });
     }
 
     if(get_third_party == null) {
