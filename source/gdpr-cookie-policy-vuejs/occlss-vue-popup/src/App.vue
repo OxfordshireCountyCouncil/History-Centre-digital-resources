@@ -64,7 +64,10 @@ export default {
         if (url.indexOf('/') !== -1) {
             return url.split('/')[0];
         }
-        return  "." + url;
+        if(url != 'localhost') {
+            url = "." + url;
+        }
+        return  url;
     },
     DeleteCookies() {
         this.$cookie.delete('_ga', {domain: this.GetDomain()});
@@ -82,7 +85,6 @@ export default {
                 location.reload();
             }
         }
-
         if(value.type == 'third_party'){
             this.$cookie.set('third_party', value.status, { expires: date, domain: this.GetDomain()});
         }

@@ -79,15 +79,11 @@ export default {
   },
   methods: {
     GetDomain() {
-
         let url = window.location.hostname;
         const subdomain = false;
-
         url = url.replace(/(https?:\/\/)?(www.)?/i, '');
-
         if (!subdomain) {
             url = url.split('.');
-
             url = url.slice(url.length - 2).join('.');
         }
 
@@ -95,14 +91,18 @@ export default {
             return url.split('/')[0];
         }
 
-        return '.' + url;
+        if(url != 'localhost') {
+            url = "." + url;
+        }
+
+        return  url;
     },
     DeleteCookies() {
         this.$cookie.delete('_ga', {domain: this.GetDomain()});
         this.$cookie.delete('_gid', {domain: this.GetDomain()});
         this.$cookie.delete('_gat', {domain: this.GetDomain()});
     },
-    saveOptions(e) {
+    saveOptions() {
       this.popupStatus = false;
       this.SetCookie({'type': 'google', 'status' : this.google_analytics });
       this.SetCookie({'type': 'third_party', 'status' : this.third_party });
@@ -110,10 +110,9 @@ export default {
       if(this.google_analytics == 'false') {
               this.DeleteCookies();
       }
-      //e.preventDefault();
     },
     SetCookie(value){
-        var date = new Date;
+        const date = new Date;
         date.setDate(date.getDate() + 365);
 
         if(value.type == 'google'){
