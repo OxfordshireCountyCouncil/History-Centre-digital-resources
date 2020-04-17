@@ -56,21 +56,21 @@ export default {
       }
   },
   created() {
-    var get_google_stats = this.$cookie.get('google_stats');
-    var get_third_party = this.$cookie.get('third_party');
-    var get_cookie_settings = this.$cookie.get('cookie_settings');
+    const get_google_stats = this.$cookie.get('google_stats');
+    //const get_third_party = this.$cookie.get('third_party');
+    const get_cookie_settings = this.$cookie.get('cookie_settings');
 
     this.google_analytics = get_google_stats;
-    this.third_party = get_third_party;
+    //this.third_party = get_third_party;
 
     
     if(get_google_stats == null) {
         this.SetCookie({'type': 'google', 'status' : false });
     }
 
-    if(get_third_party == null) {
+    /*if(get_third_party == null) {
         this.SetCookie({'type': 'third_party', 'status' : false });
-    }
+    }*/
 
     if(get_cookie_settings == null) {
         this.SetCookie({'type': 'cookie_settings', 'status' : false });
@@ -105,7 +105,7 @@ export default {
     saveOptions() {
       this.popupStatus = false;
       this.SetCookie({'type': 'google', 'status' : this.google_analytics });
-      this.SetCookie({'type': 'third_party', 'status' : this.third_party });
+      //this.SetCookie({'type': 'third_party', 'status' : this.third_party });
       this.SetCookie({'type': 'cookie_settings', 'status' : true });
       if(this.google_analytics == 'false') {
               this.DeleteCookies();
@@ -119,9 +119,9 @@ export default {
             this.$cookie.set('google_stats', value.status, { expires: date, domain: this.GetDomain()});
         }
 
-        if(value.type == 'third_party'){
+        /*if(value.type == 'third_party'){
             this.$cookie.set('third_party', value.status, { expires: date, domain: this.GetDomain()});
-        }
+        }*/
 
         if(value.type == 'cookie_settings'){
             this.$cookie.set('cookie_settings', value.status, { expires: date, domain: this.GetDomain()});
