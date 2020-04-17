@@ -42,7 +42,11 @@ function browserSync(done) {
     server: {
       baseDir: paths.dir.deployDir
     },
-    port: 8080
+    port: 8080,
+    https: {
+      key: ".localhost-ssl/localhost.key",
+      cert: ".localhost-ssl/localhost.crt"
+    }
   });
   done();
 }

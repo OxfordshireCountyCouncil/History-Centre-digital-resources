@@ -16,20 +16,7 @@
         </div>
   </fieldset>
 
-  <fieldset v-if="tpText">
-      <legend class="occlss-form__group-title occlss-form__group-title--large">Third party cookies</legend>
-      <p class="occlss-u-bspace-md" v-html="tpText"></p>
-      <div class="occlss-form-cntrls">
-          <input type="radio" v-model="third_party" id="third-party-cookies-on" name="third_party_cookies" value="true" class="occlss-form-cntrls__radiobutton">
-          <label class="occlss-form-cntrls__label occlss-form-cntrls__label--small option" for="third-party-cookies-on">on</label>
-      </div>
-      <div class="occlss-form-cntrls ">
-          <input type="radio" v-model="third_party" id="third-party-cookies-off" name="third_party_cookies" value="false" class="occlss-form-cntrls__radiobutton">
-          <label class="occlss-form-cntrls__label occlss-form-cntrls__label--small option" for="third-party-cookies-off">off</label>
-      </div>
-  </fieldset>
-
-   <nav class="occlss-form__controls occlss-u-bspace-large" role="navigation">
+    <nav class="occlss-form__controls occlss-u-bspace-large" role="navigation">
     <ul class="occlss-form__listitems">
       <li class="occlss-form__controls-list-item">
         <button @click="saveOptions" class="occlss-button occlss-button--primary">
@@ -38,6 +25,7 @@
       </li>
     </ul>
   </nav>
+  
 </form>
 
 </div>
@@ -50,9 +38,7 @@ export default {
   name: "occ-cookie-form",
   data () {
       return {
-        google_analytics: '',
-        third_party: ''
-        
+        google_analytics: ''
       }
   },
   created() {
