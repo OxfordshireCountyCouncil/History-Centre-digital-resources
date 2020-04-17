@@ -31,16 +31,11 @@ export default {
   },
   created() {
     const get_google_stats = this.$cookie.get('google_stats');
-    //const get_third_party = this.$cookie.get('third_party');
     const get_cookie_settings = this.$cookie.get('cookie_settings');
 
     if(get_google_stats == null) {
         this.SetCookie({'type': 'google', 'status' : false });
     }
-
-    /*if(get_third_party == null) {
-        this.SetCookie({'type': 'third_party', 'status' : false });
-    }*/
 
     if(get_cookie_settings == null) {
         this.popupStatus = true;
@@ -90,10 +85,6 @@ export default {
             }
         }
 
-        /*if(value.type == 'third_party'){
-            this.$cookie.set('third_party', value.status, { expires: date, domain: this.GetDomain()});
-        }*/
-
         if(value.type == 'cookie_settings'){
             this.$cookie.set('cookie_settings', value.status, { expires: date, domain: this.GetDomain()});
         }
@@ -103,14 +94,12 @@ export default {
         if(value == 'canceled'){
             this.popupStatus = false;
             this.SetCookie({'type': 'google', 'status' : false });
-            //this.SetCookie({'type': 'third_party', 'status' : false });
             this.SetCookie({'type': 'cookie_settings', 'status' : true });
             this.DeleteCookies();
         }
         if(value == 'accepted'){
             this.popupStatus = false;
             this.SetCookie({'type': 'google', 'status' : true });
-            //this.SetCookie({'type': 'third_party', 'status' : true });
             this.SetCookie({'type': 'cookie_settings', 'status' : true });
         }
     }
