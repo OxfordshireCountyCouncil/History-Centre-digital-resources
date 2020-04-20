@@ -54,7 +54,7 @@ export default {
   methods: {
     GetDomain() {
         let url = window.location.hostname;
-        const subdomain = false;
+        const subdomain = true;
         url = url.replace(/(https?:\/\/)?(www.)?/i, '');
         if (!subdomain) {
             url = url.split('.');
@@ -74,7 +74,6 @@ export default {
         this.$cookie.delete('_gat', {domain: this.GetDomain()});
     },
     SetCookie(value){
-
         const date = new Date;
         date.setDate(date.getDate() + 365);
 
